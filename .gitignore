@@ -1,0 +1,9 @@
+.DS_Store
+.vscode
+__pycache__
+*.cfg
+
+# QGIS Plugin related things
+plugin_upload.py
+resources.py
+resources.qrc
