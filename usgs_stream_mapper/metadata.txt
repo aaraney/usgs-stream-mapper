@@ -13,6 +13,7 @@ icon=resources/icon.png
 
 tracker=https://github.com/aaraney/usgs-stream-mapper/issues
 repository=https://github.com/aaraney/usgs-stream-mapper
+homepage=https://github.com/aaraney/usgs-stream-mapper
 
-experimental=True
+experimental=False
 deprecated=False
