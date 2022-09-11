@@ -22,6 +22,7 @@
  ***************************************************************************/
 """
 from qgis.core import (
+    Qgis,
     QgsProject,
     QgsVectorLayer,
     )
@@ -264,6 +265,14 @@ class UsgsStreamMapper:
             # Load layer into QGIS
             usgs_layer = QgsVectorLayer(layer_url, f'{site_number}: {navigation_type}')
 
+            if not usgs_layer.isValid():
+                error_subject = "Error"
+                error_message = (f"Failed to load layer data for USGS NWIS site {site_number!r}. "
+                                 f"Verify {site_number!r} is a valid USGS NWIS site and you "
+                                 "have an internet connection.")
+                self.iface.messageBar().pushMessage(error_subject, error_message, level=Qgis.Critical)
+                return
+
             # Add layer styling
             if navigation_type == 'basin':
                 usgs_layer.renderer().symbol().setColor(QColor('green'))
@@ -273,5 +282,4 @@ class UsgsStreamMapper:
                 usgs_layer.renderer().symbol().setWidth(0.5)
 
             # Add layer to map
-            if usgs_layer.isValid():
-                QgsProject.instance().addMapLayer(usgs_layer)
+            QgsProject.instance().addMapLayer(usgs_layer)
