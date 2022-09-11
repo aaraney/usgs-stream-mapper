@@ -37,7 +37,6 @@ from qgis.PyQt.QtWidgets import QAction
 from .resources import *
 # Import the code for the dialog
 from .usgs_stream_mapper_dialog import UsgsStreamMapperDialog
-from pathlib import Path
 import os.path
 # Import for layer coloring
 from PyQt5.QtGui import QColor
@@ -210,11 +209,8 @@ class UsgsStreamMapper:
     @staticmethod
     def base_station_url(station_id):
         """Return USGS stations prepended with NLDI service end point"""
-        return (
-            Path('https://labs.waterdata.usgs.gov/api/nldi/linked-data'
-            + f'/nwissite/USGS-{station_id}')
-        )
-    
+        return f'https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-{station_id}'
+
     @staticmethod
     def navigate(base_station_url, navigation_type):
         """Map a navigation type to a given base url
@@ -234,7 +230,7 @@ class UsgsStreamMapper:
 
         try:
             suffix = suffix_map[navigation_type]
-            return ( base_station_url / suffix ).as_posix()
+            return f"{base_station_url.rstrip('/')}/{suffix}"
 
         except KeyError:
             raise KeyError(
