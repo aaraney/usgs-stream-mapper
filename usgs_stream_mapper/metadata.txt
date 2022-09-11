@@ -4,7 +4,7 @@ qgisMinimumVersion=3.0
 description=Display upstream/downstream tributaries and basins using USGS NWIS site numbers
 version=0.2
 author=Austin Raney
-email=aaraney@crimson.ua.edu
+email=aaraney@protonmail.com
 
 about=Quickly display basins and channel flow lines for streams within the NHD network using a USGS NWIS site numbers. All that is needed is a USGS site number and a way to traverse to network.<br>This is a wrapper for the <a href="https://labs.waterdata.usgs.gov/about-nldi/">Hydro-Network Linked Data Index API</a>.
 tags=python, usgs, river, water, flooding, hydrology
