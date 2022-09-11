@@ -248,6 +248,11 @@ class UsgsStreamMapper:
             self.first_start = False
             self.dlg = UsgsStreamMapperDialog()
 
+        # bring widget to focus if already on screen
+        if self.dlg.isVisible():
+            self.dlg.raise_()
+            return
+
         # show the dialog
         self.dlg.show()
         # Run the dialog event loop
