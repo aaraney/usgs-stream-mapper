@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 - updated nldi url from labs.waterdata.usgs.gov to api.water.usgs.gov.
   learn more at https://waterdata.usgs.gov/blog/nldi-intro/#introduction.
   thanks to Martin for reporting this!
+- update links to nldi docs.
+  thanks for reporting this @joeledvina! (#5)
 
 ## [0.3] - 2022-09-11
 ### Fixed
