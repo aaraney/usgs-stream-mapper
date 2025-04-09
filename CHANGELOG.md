@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.4] - 2025-04-08
+### Changes
+- updated nldi url from labs.waterdata.usgs.gov to api.water.usgs.gov.
+  learn more at https://waterdata.usgs.gov/blog/nldi-intro/#introduction.
+  thanks to Martin for reporting this!
+
 ## [0.3] - 2022-09-11
 ### Fixed
 - display error message when layer fails to load (#3).
