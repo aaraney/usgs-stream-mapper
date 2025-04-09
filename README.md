@@ -24,7 +24,7 @@ Supported navigation types:
 ## Acknowledgements
 
 This project uses the [USGS's Hydro-Network Linked Data
-Index](https://labs.waterdata.usgs.gov/about-nldi/), for details please visit
+Index](https://waterdata.usgs.gov/blog/nldi-intro/), for details please visit
 their website or [repository](https://github.com/ACWI-SSWD/nldi-services).
 
 Other great projects:
