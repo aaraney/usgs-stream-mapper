@@ -210,7 +210,7 @@ class UsgsStreamMapper:
     @staticmethod
     def base_station_url(station_id):
         """Return USGS stations prepended with NLDI service end point"""
-        return f'https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-{station_id}'
+        return f'https://api.water.usgs.gov/nldi/linked-data/nwissite/USGS-{station_id}'
 
     @staticmethod
     def navigate(base_station_url, navigation_type):
