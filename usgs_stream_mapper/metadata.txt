@@ -2,7 +2,7 @@
 name=USGS Stream Mapper
 qgisMinimumVersion=3.0
 description=Display upstream/downstream tributaries and basins using USGS NWIS site numbers
-version=0.4
+version=0.5
 author=Austin Raney
 email=aaraney@protonmail.com
 
