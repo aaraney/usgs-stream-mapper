@@ -222,6 +222,7 @@ class UsgsStreamMapper:
         """
 
         suffix_map = {
+            'site': '',
             'basin': 'basin',
             'downstream_diversions': 'navigate/DD',
             'downstream_main': 'navigate/DM',
@@ -282,6 +283,8 @@ class UsgsStreamMapper:
             if navigation_type == 'basin':
                 usgs_layer.renderer().symbol().setColor(QColor('green'))
                 usgs_layer.renderer().symbol().setOpacity(0.5)
+            elif navigation_type == 'site':
+                usgs_layer.renderer().symbol().setColor(QColor('black'))
             else:
                 usgs_layer.renderer().symbol().setColor(QColor('blue'))
                 usgs_layer.renderer().symbol().setWidth(0.5)

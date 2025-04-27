@@ -124,6 +124,11 @@
      <string>Upstream Tributaries</string>
     </property>
    </item>
+   <item>
+    <property name="text">
+     <string>Site</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <resources/>
