@@ -6,4 +6,3 @@ __pycache__
 # QGIS Plugin related things
 plugin_upload.py
 resources.py
-resources.qrc

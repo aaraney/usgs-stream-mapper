@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/usgs_stream_mapper" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
