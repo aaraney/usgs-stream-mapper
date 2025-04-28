@@ -126,6 +126,11 @@
    </item>
    <item>
     <property name="text">
+     <string>Upstream NWIS Sites</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
      <string>Site</string>
     </property>
    </item>

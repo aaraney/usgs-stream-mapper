@@ -228,6 +228,7 @@ class UsgsStreamMapper:
             'downstream_main': 'navigate/DM',
             'upstream_main': 'navigate/UM',
             'upstream_tributaries': 'navigate/UT',
+            'upstream_nwis_sites': 'navigate/UT/nwissite',
         }
 
         try:
@@ -237,7 +238,8 @@ class UsgsStreamMapper:
         except KeyError:
             raise KeyError(
                 'Acceptable keys are: basin, downstream_diversions, '
-                + 'downstream_main, upstream_main, upstream_tributaries.'
+                + 'downstream_main, upstream_main, upstream_tributaries,'
+                + 'upstream_nwis_sites.'
                 )
 
     def run(self):
@@ -285,6 +287,9 @@ class UsgsStreamMapper:
                 usgs_layer.renderer().symbol().setOpacity(0.5)
             elif navigation_type == 'site':
                 usgs_layer.renderer().symbol().setColor(QColor('black'))
+            elif navigation_type == 'upstream_nwis_sites':
+                usgs_layer.renderer().symbol().setColor(QColor('green'))
+                usgs_layer.renderer().symbol().setOpacity(0.5)
             else:
                 usgs_layer.renderer().symbol().setColor(QColor('blue'))
                 usgs_layer.renderer().symbol().setWidth(0.5)
